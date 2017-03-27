@@ -1,0 +1,93 @@
+/* Default formatting for body
+*/
+body {
+	margin: 0px;
+	background-color:#d8d8d8 ;
+	font-family: Verdana, Geneva, Arial, sans-serif;   
+	font-size: medium;
+	line-height: 1.5em;
+      }	
+
+/* Special formatting for header section
+*/
+header { 
+	  background-color: #c0c0c0;
+          line-height: 1;
+	  text-align: center;
+	  padding: 1px;
+         }
+
+header h1 {
+	     border-bottom: 2px solid red;
+	     color: blue;
+	     font-size: 200%;
+	     font-weight: bold;
+	   }
+
+.three {
+	 color: red;
+	 font-weight: normal;
+	 font-size: 75%;
+	 font-style: italic;
+	}
+
+/* Special formatting for introduction section
+*/
+#intro {
+	color: gray;
+	font-style: italic;
+	padding: 20px;	
+  }
+
+/* Special formatting for forminfo section
+*/
+#forminfo {
+	   background-color: #efeff5;
+	   color: navy;
+	   border: 2px solid navy;
+	   padding: 20px;
+	   margin: 0px 344px 0px 0px;
+	  }	    
+
+/* Special formatting for summary list 
+*/
+#sumlist {
+	  background-color: #d8d8d8;
+	  padding: 0px 20px;  
+	  float: right;
+         }	
+/* ...and frame within summary list 
+*/
+iframe {
+	width: 300px; 
+	height: 400px;
+	}
+
+/* Special formatting for footer section
+*/
+footer {
+	 color: black;
+	 background-color: gray;
+	 padding: 1px;
+	 clear: right;
+        }	
+
+
+/* Special formatting for links
+*/
+a:link {
+	color: red;
+	}
+
+a:visited {
+	   color: blue;
+	  }
+
+a:hover {
+	 background: red;
+	 color: yellow;
+	}
+
+
+
+
