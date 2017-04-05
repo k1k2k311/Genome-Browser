@@ -2,8 +2,15 @@ class CodonFrequency
 
 def codoncal()
 
+
+codonlist = ('AAA','AAC','AAG','AAT','ACA','ACC','ACT','ACG','ATA','ATC','ATT','ATG','AGA','AGC','AGT','AGG',  
+             'CAA','CAC','CAG','CAT','CCA','CCC','CCT','CCG','CTA','CTC','CTT','CTG','CGA','CGC','CGT','CGG',
+             'TAA','TAC','TAG','TAT','TCA','TCC','TCT','TCG','TTA','TTC','TTT','TTG','TGA','TGC','TGT'.'TGG',
+             'GAA','GAC','GAG','GAT','GCA','GCC','GCT','GCG','GTA','GTC','GTT','GTG','GGA','GGC','GGT','GGG')
+
+
 degen_dict = {}
-for codons in degenerated:
+for codons in codonlist:
     for codon in codons:
         degen_dict[codon] = codons
 
