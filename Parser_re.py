@@ -47,17 +47,6 @@ for gene in records:
 
 fo.close()
 
-#for gene in records:
-#GI = p1.finditer(gbk_data)
-#gene_name = p2.finditer(gbk_data)
-#product = p3.finditer(gbk_data)
-#accession = p4.finditer(gbk_data)
-#locus = p5.finditer(gbk_data)
-
-#fo = open('summary_table.dat', 'w')
-#for i in 1:len(GI) write
-
-
 
 # TABLE 2
 #fo = open("chrom_3_table_2.dat", "w")
