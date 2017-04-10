@@ -15,24 +15,24 @@ def count_codons(cds):
        counts[codon] += 1
     return counts
 
-
 def translate(cds, codon_aa):
     return "".join((codon_aa[cds[i:i+3]] for i in range(0, len(cds), 3)))
 
-seq ='ATGAAGAAAGGT'
 
-codon_counts = count_codons(seq)
-trans_seq = translate(seq,codon_aa)
-
-
-print([(codon, codon_aa[codon], float(codon_counts[codon])/trans_seq.count(codon_aa[codon])) for codon in codon_counts.keys()])
+def count_relev_perce_codons(cds):
+    codon_counts = count_codons(cds)
+    trans_seq = translate(cds,codon_aa)
+    return [(codon, codon_aa[codon], float(codon_counts[codon])/trans_seq.count(codon_aa[codon])) for codon in codon_counts.keys()]
 
 
 def count_perce_codons(cds):
     counts = collections.defaultdict(int)
     for i in range(0,len(cds),3):
        codon = cds[i:i+3]
-       counts[codon] += 1/(len(cds)/3)
+       counts[codon] +=(1/(len(cds)/3))*100
     return counts
 
-print(count_perce_codons(seq))
+cds='AAATTCACATCAAAAGTAGTT'
+
+print(count_relev_perce_codons(cds))
+print(count_perce_codons(cds))
