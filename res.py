@@ -1,7 +1,7 @@
 
 import re
 
-enzymes= {'BamHI':r"GGATCC",'EcoRI':r"GAATTC"}
+enzymes= {'BamHI':r"GGATCC",'EcoRI':r"GAATTC",'BsuMI':r"CTCGAG"}
 
 sequence = 'AAGGATCCAGAATTCAAGGATCCAAC'
 
