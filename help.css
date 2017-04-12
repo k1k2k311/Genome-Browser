@@ -1,0 +1,63 @@
+/* Default formatting for body
+*/
+body {
+        margin: 0px;
+        background-color:white;
+        font-family: Verdana, Geneva, Arial, sans-serif;
+        font-size: medium;
+        line-height: 1.5em;
+        color: navy;
+}
+
+/* Formatting for header section
+*/
+header {
+        background-color: white;
+        line-height: 1;
+        text-align: center;
+        padding: 1px;
+}
+
+header h1 {
+        border-bottom: 2px solid navy;
+        color: navy;
+        font-size: 175%;
+        font-weight: bold;
+}
+
+.red {
+        color: red;
+}
+
+header h2 {
+        color:red;
+        font-size: 100%;
+        font-style: italic;
+        font-weight: normal;
+}
+
+h3 {
+        color: red;
+}
+
+.panel-body {
+        color: gray;
+}
+
+.tiny {
+        font-size: 50%;
+}
+
+/* Formatting for footer section
+*/
+footer {
+        background-color: navy;
+        padding: 1px;
+        clear: right;
+        }
+
+/* Formatting for links
+*/
+a:link {
+        color: navy;
+"WWW/css/help.css" 109L, 1336C                                                                                                                                                            1,1           Top
