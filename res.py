@@ -47,7 +47,7 @@ def single_res(enzyme, sequence):
 	for match in find:
 		find_st=match.start()
 		find_end=match.end()
-		return(enzyme,str(find_st),str(find_end))
+		print(enzyme,str(find_st),str(find_end))
 
 	
 
