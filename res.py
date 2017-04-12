@@ -23,7 +23,7 @@ for match in runs:
     run_end = match.end()
     print("AT rich region from " + str(run_start) + " to " + str(run_end))
 
-$this not works
+#this not works
 
 def giveme_res(sequence):
     find=re.finditer(r"GGATCC",sequence)
