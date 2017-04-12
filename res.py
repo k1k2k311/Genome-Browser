@@ -1,20 +1,11 @@
+
 import re
 
 enzymes= {'BamHI':r"GGATCC",'EcoRI':r"GAATTC"}
 
 sequence = 'AAGGATCCAGAATTCAAGGATCCAAC'
 
-
-#Main Idea
-
-for k in enzymes.keys():
-    find=re.finditer(enzymes[k],sequence)
-    for match in find:
-        find_st=match.start()
-        find_end=match.end()
-        print(k,str(find_st),str(find_end))
-
-#Some error occured on "return" function, it does not print out multiple result,
+store_list = []
 
 def giveme_res (sequence):
     for k in enzymes.keys():
@@ -22,32 +13,24 @@ def giveme_res (sequence):
         for match in find:
             find_st=match.start()
             find_end=match.end()
-            return (k,str(find_st),str(find_end))
-		    
-print(giveme_res('AAGGATCCAGAATTCAAGGATCCAAC'))
+            store_list.append((k,str(find_st),str(find_end)))
+    return store_list
+            
 
-#Therefore, I wrote print at the end instead, however "none" result pop up at the end
+print(giveme_res(sequence))
 
-def giveme_res (sequence):
-    for k in enzymes.keys():
-        find=re.finditer(enzymes[k],sequence)
-        for match in find:
-            find_st=match.start()
-            find_end=match.end()
-            print (k,str(find_st),str(find_end))
-		
-
-print(giveme_res('AAGGATCCAGAATTCAAGGATCCAAC'))
-		    
 
 #for single enzyme find usage,
 
+store_list_single=[]
 def single_res(enzyme, sequence):
 	find=re.finditer(enzymes[enzyme],sequence)
 	for match in find:
 		find_st=match.start()
 		find_end=match.end()
-		print(enzyme,str(find_st),str(find_end))
+		store_list_single.append((enzyme,str(find_st),str(find_end))
+	return store_list_single
+					 
 
 	
 
