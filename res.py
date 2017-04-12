@@ -22,7 +22,7 @@ def giveme_res (sequence):
         for match in find:
             find_st=match.start()
             find_end=match.end()
-            return (k,str(find_st),str(find_end)
+            return (k,str(find_st),str(find_end))
 		    
 print(giveme_res('AAGGATCCAGAATTCAAGGATCCAAC'))
 
@@ -34,11 +34,20 @@ def giveme_res (sequence):
         for match in find:
             find_st=match.start()
             find_end=match.end()
-            print (k,str(find_st),str(find_end)
+            print (k,str(find_st),str(find_end))
 		
 
 print(giveme_res('AAGGATCCAGAATTCAAGGATCCAAC'))
 		    
-		    
-		
+
+#for single enzyme find usage,
+
+def single_res(enzyme, sequence):
+	find=re.finditer(enzymes[enzyme],sequence)
+	for match in find:
+		find_st=match.start()
+		find_end=match.end()
+		return(enzyme,str(find_st),str(find_end))
+
+	
 
