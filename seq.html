@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head>
+      <meta charset="utf-8"> 
+      <title>RGR3 Genome Browser</title>
+      <link type="text/css" rel="stylesheet" href="css/rgr3.css"> 
+    </head>
+
+    <body>
+      <header>
+        <h1>RGR <span class="red">3</span> Genome Browser</h1>
+        <h2>Homo sapiens (Human) Chromosome 3</h2>
+      </header>
+
+<!-- Navigation toolbar
+-->
+      <nav>
+        <ul>
+         <li><a href="index.html">HOME</a></li>
+         <li><a href="codon.html">CODON FREQUENCIES</a><li>
+         <li><a href="about.html">ABOUT</a></li>
+         <li><a href="help.html">HELP</a></li>
+        </ul>
+       </nav>
+
+<!--Insert summary list table
+-->
+       <aside>
+        <h4><span class="red">Summary List</span></h4>
+          <iframe src ="http://student.cryst.bbk.ac.uk/cgi-bin/cgiwrap/sr002/sumlist.py"></iframe>
+       </aside>
+
+
+
+        <main>
+        <form
+        action="http://student.cryst.bbk.ac.uk/cgi-bin/cgiwrap/sr002/seq.py" 
+        method="post">
+
+<!-- Create box for user input-sequence entry box
+-->
+<p><b>Enter Sequence:</b><br />^M<textarea name="seq" cols='40' rows='10'></textarea></p>^M
+
+
+
+<!-- Create checkboxes for analysis
+-->
+            <fieldset>
+                 <legend><b>Analysis types</b></legend>
+                 <input name="an_type" type="checkbox" value="dna_seq" />Complete DNA sequence<br />^M           <input name="an_type" type="checkbox" value="aa_seq" />Amino acid sequence<br />^M              <input name="an_type" type="checkbox" value="codon" />Codon frequencies<br />
+
+               <p> Sticky end restriction enzyme sites:</p>
+               <p>
+                  <input name="an_type" type="checkbox" value="EcoRI" />EcoRI &nbsp;&nbsp;&nbsp;&nbsp;
+                  <input name="an_type" type="checkbox" value="BamHI" />BamHI &nbsp;&nbsp;&nbsp;&nbsp;
+                  <input name="an_type" type="checkbox" value="BsuMI" />BsuMI<br />
+              </p>
+           </fieldset>
+
+<!-- Form submit/clear button
+-->
+"seq.html" 89L, 2580C                                                                                                                                                                     1,1           Top
