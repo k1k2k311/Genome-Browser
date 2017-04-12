@@ -1,4 +1,32 @@
- #Print HTML MIME-TYPE header
+#!/usr/bin/env python3
+
+import cgi;
+
+#Debugging output
+import cgitb
+
+#Send errors to browser
+cgitb.enable
+
+#Grab form contents
+form = cgi.FieldStorage()
+
+#Get data from fields:
+#Radio button search
+if form.getvalue("search_type"):
+    search_type = form.getvalue("search_type")
+else:
+    search_type = "None"
+^M
+#Entered data^Mif form.getvalue("data"):
+    data = form.getvalue("data")
+else:
+    data = "None entered"
+
+#analysis type checkbox 
+an_type  = form.getlist("an_type")
+
+#Print HTML MIME-TYPE header
 print ('Content-type:text/html\n')
 print()
 html ='<!DOCTYPE html>\n'
