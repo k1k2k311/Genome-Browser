@@ -16,12 +16,6 @@ def giveme_res (sequence):
 
 print(giveme_res('GGATCCGGATCC'))
 
-dna = "ACTGCATTATATCGTACGAAATTATACGCGCG"
-runs = re.finditer(r"ATA", dna)
-for match in runs:
-    run_start = match.start()
-    run_end = match.end()
-    print("AT rich region from " + str(run_start) + " to " + str(run_end))
 
 #this not works
 
