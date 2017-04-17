@@ -32,7 +32,9 @@ def single_res(enzyme, sequence):
 	return store_list_single
 
 store_list_custom=[]  gtagta   r'gtagta
-					 
+
+#for custom search
+
 def custom_search_res(res_seq,sequence):
 	pattern = re.compile(res_seq)
 	find= pattern.finditer(sequence)
