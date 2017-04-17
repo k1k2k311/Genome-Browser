@@ -20,26 +20,27 @@ db.close()
 # If you are usign MySQL.cooonecter,
 
 
-import datetime
+
 import mysql.connector
+myConnection = mysql.connector.connect( host=hostname, user=username, passwd=password, db=database )
+doQuery( myConnection )
+myConnection.close()
 
-cnx = mysql.connector.connect(user='scott', database='employees')
-cursor = cnx.cursor()
+hostname = 'localhost'
+username = 'USERNAME'
+password = 'PASSWORD'
+database = 'DBNAME'
 
-query = ("SELECT first_name, last_name, hire_date FROM employees "
-         "WHERE hire_date BETWEEN %s AND %s")
+def doQuery( conn ) :
+    cur = conn.cursor()
 
-hire_start = datetime.date(1999, 1, 1)
-hire_end = datetime.date(1999, 12, 31)
+    cur.execute( "SELECT fname, lname FROM employee" )
 
-cursor.execute(query, (hire_start, hire_end))
+    for firstname, lastname in cur.fetchall() :
+        print firstname, lastname
 
-for (first_name, last_name, hire_date) in cursor:
-  print("{}, {} was hired on {:%d %b %Y}".format(
-    last_name, first_name, hire_date))
 
-cursor.close()
-cnx.close()
+
 
 #just in case, using sqlite3
 
