@@ -91,7 +91,7 @@ database = 'DBNAME'
 def doQuery( conn ) :
     cur = conn.cursor()
 
-    cur.execute( "SELECT fname, lname FROM employee" )
+    cur.execute( "" )
 
     for firstname, lastname in cur.fetchall() :
         print firstname, lastname
