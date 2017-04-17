@@ -1,3 +1,7 @@
+import MySQLconnect.py
+
+#v1
+
 def gene_search(terms, searchtype = []):
     found = []
 
