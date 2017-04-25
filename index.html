@@ -1,3 +1,7 @@
+<!-- index/home/gene analysis page
+
+     necesary html code, title, header and link to css styling file
+-->
 <!doctype html>
 <html>
     <head>
@@ -9,92 +13,99 @@
     <body>
       <header>
         <h1>RGR <span class="red">3</span> Genome Browser</h1>
-        <h2>Homo sapiens (Human) Chromosome 3</h2>
+	<h2>Homo sapiens (Human) Chromosome 3</h2> 
       </header>
 
 <!-- Navigation toolbar
 -->
       <nav>
         <ul>
-         <li><a href="index.html">HOME</a></li>
-         <li><a href="codon.html">CODON FREQUENCIES</a><li>
-         <li><a href="about.html">ABOUT</a></li>
-         <li><a href="help.html">HELP</a></li>
-        </ul>
+	 <li><a href="index.html">HOME</a></li>
+	 <li><a href="codon.html">CODON FREQUENCIES</a><li> 
+	 <li><a href="about.html">ABOUT</a></li>
+	 <li><a href="help.html">HELP</a></li>
+	</ul>	
        </nav>
 
-
-<!--Insert summary list table
+<!--Insert summary list table - must come immediately under nav toolbar as an aside
 -->
        <aside>
-        <h4><span class="red">Summary List</span></h4>
+	<h4><span class="red">Summary List</span></h4>
           <iframe src ="http://student.cryst.bbk.ac.uk/cgi-bin/cgiwrap/sr002/sumlist.py"></iframe>
        </aside>
 
-
-<!-- Radio buttons to search on            
+<!-- Main form - Radio buttons to search on - link to cgi script           
 -->
       <main>
-        <form
-        action="http://student.cryst.bbk.ac.uk/cgi-bin/cgiwrap/sr002/form.py" 
-        method="post">
-            <p><b>Search on:</b><br />
-                <input name="search_type" value="Gene Identifier" type="radio" checked="checked" />Gene identifier<br />
-                <input name="search_type" value="Gene name" type="radio" />Gene name<br />
-                <input name="search_type" value="Genbank Accession" type="radio" />GenBank Accession<br />
-                <input name="search_type" value="Protein product" type="radio" />Protein product<br />
-                <input name="search_type" value="Chromosomal location" type="radio" />Chromosomal location<br />
-            </p>
+	<form
+	action="http://student.cryst.bbk.ac.uk/cgi-bin/cgiwrap/sr002/form.py" 
+	method="post">
+	    <p><b>Search on:</b><br />
+	        <input name="search_type" value="Gene Identifier" type="radio" checked="checked" />Gene identifier<br />
+		<input name="search_type" value="Gene name" type="radio" />Gene name<br />
+	        <input name="search_type" value="Genbank Accession" type="radio" />GenBank Accession<br />
+ 		<input name="search_type" value="Protein product" type="radio" />Protein product<br />
+	        <input name="search_type" value="Chromosomal location" type="radio" />Chromosomal location<br />
+	    </p>
 
 <!-- Create box for user input relating to radio button-data entry box
 -->
-            <p><b>Enter data:</b><br />
-                <input name="data" type="text" placeholder="7106501, HSG, alpha-HS glycoprotein, AB038689, 3q27" size="50" /></p>
-
-
-
+	    <p><b>Enter data:</b><br />
+	        <input name="data" type="text" placeholder="e.g. 7106501, alpha-HS glycoprotein, AB038689, HSG, 3q27" size="52" required /></p>
 
 <!-- Create checkboxes for analysis
--->
-            <fieldset>
-                 <legend><b>Analysis types</b></legend>
-                 <input name="an_type" type="checkbox" value="dna_seq" />Complete DNA sequence<br />^M           <input name="an_type" type="checkbox" value="aa_seq" />Amino acid sequence<br />^M              <input name="an_type" type="checkbox" value="codon" />Codon frequencies<br />
-                                                                                                                                                                                          1,15          Top
-<p><b>Sticky end restriction enzyme sites:</b></p>
-               <p>
-                  <input name="an_type" type="checkbox" value="EcoRI" />EcoRI &nbsp;&nbsp;&nbsp;&nbsp;
-                  <input name="an_type" type="checkbox" value="BamHI" />BamHI &nbsp;&nbsp;&nbsp;&nbsp;
-                  <input name="an_type" type="checkbox" value="BsuMI" />BsuMI<br />
-              </p>
-                <p><b>Enter sticky end restriction enzyme site:</b><br />
-                        <input name="stickyend" type="text" placeholder="EcoRI" size="20" /></p>
-           </fieldset>
+-->	     
+	    <fieldset>
+	         <legend><b>Analysis types</b></legend>
+	         <input name="an_type" type="checkbox" value="dna_seq" />Complete DNA sequence<br />
+		 <input name="an_type" type="checkbox" value="aa_seq" />Amino acid sequence<br />
+		 <input name="an_type" type="checkbox" value="codon" />Codon frequencies<br />	
 
+<!-- create drop menu box for sticky end
+-->	      
+		<p>Sticky end restriction sites for enzymes:</p>
+	        <select name="sticky_ends" multiple>
+		  <option value="EcoRI">EcoRI</option>
+		  <option value="BamHI">BamHI</option>
+		  <option value="BsuMI">BsuMI</option> 
+		</select>
+	   </fieldset>
+	      
 <!-- Form submit/clear button
 -->
-            <p>
-                <input type="submit" value="Submit data" />&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="reset" value="Clear form" />
-            </p>
+	    <p>
+	        <input type="submit" value="Submit data" />&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="reset" value="Clear form" />
+	    </p>
 
-        </form>
+	</form>
        </main>
 
-        <div id="or">
-        <p><b><span class="red">OR</span></b>&nbsp;&nbsp;&nbsp;&nbsp;Search by <a href="seq.html"
-           title="Sequence Search">Sequence</a><p>
-        </div>
+
+<!-- create link to search by sequence page
+-->
+	<div id="or">
+	<p><b><span class="red">OR</span></b>&nbsp;&nbsp;&nbsp;&nbsp;Search by <a href="seq.html"
+	   title="Sequence Search">Sequence</a></p>
+	</div>
 
 
-
+<!-- create footer 
+-->
        <footer>
-
-
 <!-- CSS level 3 Validated
 -->
-<p>^M    <a href="http://jigsaw.w3.org/css-validator/check/referer">^M        <img style="border:0;width:88px;height:31px"^M            src="http://jigsaw.w3.org/css-validator/images/vcss-blue"^M            alt="Valid CSS!" />^M    </a>^M</p>
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="Valid CSS!" />
+    </a>
+</p>
        </footer>
     </body>
 </html>
+
+
 
                              
