@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+#file for index and sequence page on gene summary list table creation
 import cgi;
 
 #Debugging output
@@ -29,10 +29,23 @@ html += '<link type="text/css" rel="stylesheet" href="http://student.cryst.bbk.a
 html += '</head>\n\n'
 html += '<body>\n'
 html += '<table>\n'
-html += '<caption>CHROMOSOME 3</caption>\n'^Mhtml += '<tr>\n'^Mhtml += '<th>Gene name</th>\n'^Mhtml += '<th>Protein product</th>\n'^Mhtml += '<th>GenBank Accession</th>\n'^Mhtml += '<th>Chromosomal location</th>\n'^Mhtml += '</tr>\n'^M
+html += '<caption>CHROMOSOME 3</caption>\n'
+html += '<tr>\n'
+html += '<th>Gene name</th>\n'
+html += '<th>Protein product</th>\n'
+html += '<th>GenBank Accession</th>\n'
+html += '<th>Chromosomal location</th>\n'
+html += '</tr>\n'
 for row in data:
-    html += '<tr>\n'^M    html += '<td>' + gene + '</td>\n'^M    html += '<td>' + product + '</td>\n'^M    html += '<td>' + accession + '</td>\n'^M    html += '<td>' + locus + '</td>\n'^M    html += '</tr>\n'
-^Mhtml += '</table>\n'
+    html += '<tr>\n'
+    html += '<td>' + gene + '</td>\n'
+    html += '<td>' + product + '</td>\n'
+    html += '<td>' + accession + '</td>\n'
+    html += '<td>' + locus + '</td>\n'
+    html += '</tr>\n'
+
+html += '</table>\n'
 html += '</body>\n'
-html += '</html>\n'^Mprint(html)
-                                                                                                                                                     19,1          All
+html += '</html>\n'
+print(html)
+                                                                                                19,1          All
