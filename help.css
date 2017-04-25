@@ -1,74 +1,77 @@
+/*Formatting for help page
+*/	
+
 /* Default formatting for body
 */
 body {
-        margin: 0px;
-        background-color:white;
-        font-family: Verdana, Geneva, Arial, sans-serif;
-        font-size: medium;
-        line-height: 1.5em;
-        color: navy;
-}
+	margin: 0px;
+	background-color:white;
+	font-family: Verdana, Geneva, Arial, sans-serif;   
+	font-size: medium;
+	line-height: 1.5em;
+	color: navy;
+}	
 
 /* Formatting for header section
 */
-header {
-        background-color: white;
-        line-height: 1;
-        text-align: center;
-        padding: 1px;
+header { 
+	background-color: white;
+	line-height: 1;
+	text-align: center;
+	padding: 1px;
 }
 
 header h1 {
-        border-bottom: 2px solid navy;
-        color: navy;
-        font-size: 175%;
-        font-weight: bold;
+	border-bottom: 2px solid navy;
+	color: navy;
+	font-size: 175%;
+	font-weight: bold;
 }
 
 .red {
-        color: red;
+	color: red;
 }
 
 header h2 {
-        color:red;
-        font-size: 100%;
-        font-style: italic;
-        font-weight: normal;
+	color:red;
+	font-size: 100%;
+	font-style: italic;
+	font-weight: normal;
 }
 
 h3 {
-        color: red;
+	color: red;
 }
 
 .panel-body {
-        color: gray;
+	color: gray;
 }
 
 .tiny {
-        font-size: 50%;
+	font-size: 50%;
 }
 
 /* Formatting for footer section
 */
 footer {
-        background-color: navy;
-        padding: 1px;
-        clear: right;
-        }
+	background-color: navy;
+	padding: 1px;
+	clear: right;
+        }	
 
 /* Formatting for links
 */
 a:link {
-        color: navy;
-}    
+	color: navy;
+}
 
 a:visited {
-        color: navy;
+	color: navy;
 }
 
 a:hover {
-        background-color: navy;
-        color: white;
+	background-color: navy;
+	color: white;
 }
 
 
@@ -76,34 +79,38 @@ a:hover {
 /*Formatting for navigation toolbar
 */
 nav {
-        background-color: navy;
-        margin: 0px;
+	background-color: navy;
+	margin: 0px;
 }
 
 nav ul {
-        margin: 0px;
-        list-style-type: none;
-        padding: 5px 0px 5px 0px;
+	margin: 0px;
+	list-style-type: none;
+	padding: 5px 0px 5px 0px;
 }
 
 nav ul li {
-        display: inline;
-        padding: 5px 10px 5px 10px;
+	display: inline;
+	padding: 5px 10px 5px 10px;
 }
 
 nav ul li a:link, nav ul li a:visited {
-        color: white;
-        border-bottom: none;
-        font-weight: bold;
+	color: white;
+	border-bottom: none;
+	font-weight: bold;
 }
 
-nav ul li a:hover {
-        background-color: navy;
-        padding: 5px 0px 5px 0px;
-}
 
 nav ul li.selected {
-        background-color: blue;
-        padding: 5px 0px 5px 0px;
+	background-color: blue;
+	padding: 7px 10px 8px 10px;
 }
+
+/* Formatting for video to display in centre of screen
+*/
+video {
+	display: block;
+	margin: 0 auto;
+	
+}	
 
