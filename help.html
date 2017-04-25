@@ -1,3 +1,8 @@
+<!-- help page encorporating bootstrap
+
+     necesary html code, title  
+-->
+
 <!doctype html>
 <html>
     <head>
@@ -12,7 +17,9 @@
 <!-- Bootstrap CSS
 -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-^M  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>^M  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <!--RGR3 css stylesheet
 -->
@@ -23,76 +30,174 @@
     <body>
       <header>
          <h1>RGR <span class="red">3</span> Genome Browser</h1>
-        <h2>Homo sapiens (Human) Chromosome 3</h2>
+	<h2>Homo sapiens (Human) Chromosome 3</h2> 
       </header>
 
 <!-- Navigation toolbar
 -->
       <nav>
         <ul>
-         <li><a href="index.html">HOME</a></li>
-         <li><a href="codon.html">CODON FREQUENCIES</a></li>
-         <li><a href="about.html">ABOUT</a></li>
-         <li class="selected"><a href="help.html">HELP</a></li>
-        </ul>
+	 <li><a href="index.html">HOME</a></li>
+	 <li><a href="codon.html">CODON FREQUENCIES</a></li>
+	 <li><a href="about.html">ABOUT</a></li>
+	 <li class="selected"><a href="help.html">HELP</a></li>
+	</ul>	
        </nav>
+
+<!-- video content with option play - include 'automatic' if preferred - note comment if video does not load
+	.mp4 considered widely supported amongst browsers
+-->
+
+<video controls width="512" height="288"
+	src="video/rgr3test.mp4">
+	<p> Sorry, please reload with another browser that supports .mp4 video elements.</p>
+</video>
+
+
 
 <!-- Bootstrap code
 -->
-<div class="container">^M  <h3>Frequently Asked Questions</h3>^M  ^M  <div class="panel-group">^M    <div class="panel panel-default">
+<div class="container">
+  <h3>Frequently Asked Questions</h3>
+  
+  <div class="panel-group">
+    <div class="panel panel-default">
 
 <!-- FAQ 1
--->^M      <div class="panel-heading">^M        <h4 class="panel-title">^M          <a data-toggle="collapse" href="#collapse1">How many genes in Chromosome 3 genome have been submitted to GenBank?</a>^M        </h4>
+-->
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse1">How many genes in Chromosome 3 genome have been submitted to GenBank?</a>
+        </h4>
+      </div>
 
 <!-- Ans 1
--->^M      </div>^M      <div id="collapse1" class="panel-collapse collapse">^M        <div class="panel-body">Chromosome 3 spans 198,295,559 base pairs. There are 2,971 genes of which 1,071 are protein coding genes.<br><span class="tiny"> As on 09 April 2017 NCBI</span><br />
-</div>^M      </div>
+-->
+      <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body">Chromosome 3 spans 198,295,559 base pairs. There are 2,971 genes of which 1,071 are protein coding genes.<br><span class="tiny"> As on 09 April 2017 NCBI</span><br />
+	</div>
+      </div>
 
 <!-- FAQ/Ans 2
 -->
-     <div class="panel-heading">^M        <h4 class="panel-title">^M          <a data-toggle="collapse" href="#collapse2">How many genes from Chromosome 3 does the RGR3 database include?</a>^M        </h4>^M     </div>^M      <div id="collapse2" class="panel-collapse collapse">^M        <div class="panel-body">RGR3 Genome Browser uses the data from Genbank and comprises a select group of 386 protein coding genes from Homo sapiens Chromosome 3 genome.</div>^M      </div>
+     <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse2">How many genes from Chromosome 3 does the RGR3 database include?</a>
+        </h4>
+     </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">RGR3 Genome Browser uses the data from Genbank and comprises a select group of 386 protein coding genes from Homo sapiens Chromosome 3 genome.</div>
+      </div>
 
 <!-- FAQ/Ans 3
 -->
-     <div class="panel-heading">^M        <h4 class="panel-title">^M          <a data-toggle="collapse" href="#collapse3">Which genes does RGR3 include?</a>^M        </h4>^M     </div>^M      <div id="collapse3" class="panel-collapse collapse">^M        <div class="panel-body">The small percentage of coding sequences that require stretches of DNA to be joined from another entry to form the complete coding sequence, have not been selected for inclusion. Similarly, mutations, variations, and alternative splicing have also been omitted from the RGR3 database. In the case of alternative splicing, the first splice variant has been selected. For a full list of the genes in RGR3 database please refer back to the home page<a href="index.html"> summary list</a>.</div>^M      </div>
+     <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse3">Which genes does RGR3 include?</a>
+        </h4>
+     </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">The small percentage of coding sequences that require stretches of DNA to be joined from another entry to form the complete coding sequence, have not been selected for inclusion. Similarly, mutations, variations, and alternative splicing have also been omitted from the RGR3 database. In the case of alternative splicing, the first splice variant has been selected. For a full list of the genes in RGR3 database please refer back to the home page<a href="index.html"> summary list</a>.
+	</div>
+      </div>
 
 <!-- FAQ/Ans 4
 -->
-      <div class="panel-heading">^M        <h4 class="panel-title">^M          <a data-toggle="collapse" href="#collapse4">Why are the Gene Identifier and GenBank Accession codes different?</a>^M        </h4>^M      </div>^M      <div id="collapse4" class="panel-collapse collapse">^M        <div class="panel-body">Gene Identifier: A unique numeric identifier given to each sequence record processed by NCBI (National Centre for Biotechnology Information).  GenBank Accession: A unique identifier comprising of five digits preceeded by two letters, given to a sequence when it is submitted to the GenBank DNA repository, in line with the International Nucleotide Sequence Database Collaboration.</div>^M      </div>
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse4">Why are the Gene Identifier and GenBank Accession codes different?</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <div class="panel-body">Gene Identifier: A unique numeric identifier given to each sequence record processed by NCBI (National Centre for Biotechnology Information).  GenBank Accession: A unique identifier comprising of five digits preceeded by two letters, given to a sequence when it is submitted to the GenBank DNA repository, in line with the International Nucleotide Sequence Database Collaboration.
+	</div>
+      </div>
 
 
 <!-- FAQ/Ans 5
 -->
-     <div class="panel-heading">^M        <h4 class="panel-title">^M          <a data-toggle="collapse" href="#collapse5">Does the RGR3 database contain codon frequencies?</a>^M        </h4>^M     </div>^M      <div id="collapse5" class="panel-collapse collapse">^M        <div class="panel-body">Yes. If you wish to compare the codon bias between genomes then please look at the <a href="codon.html">Chromosome 3 codon frequency table. To compare codon bias between an individual gene and the genome average then select the <a href="index.html">codon frequencies checkbox</a> on the homepage.</a></span><br /></div>^M      </div>
+     <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse5">Does the RGR3 database contain codon frequencies?</a>
+        </h4>
+     </div>
+      <div id="collapse5" class="panel-collapse collapse">
+        <div class="panel-body">Yes. If you wish to compare the codon bias between genomes then please look at the <a href="codon.html">Chromosome 3 codon frequency table.</a> To compare codon bias between an individual gene and the genome average then select the <a href="index.html">codon frequencies checkbox</a> on the homepage.</div>
+      </div>
 
 <!-- FAQ/Ans 6
 -->
-     <div class="panel-heading">^M        <h4 class="panel-title">^M          <a data-toggle="collapse" href="#collapse6">Why compare codon frequencies within the genome?</a>^M        </h4>^M     </div>^M      <div id="collapse6" class="panel-collapse collapse">^M        <div class="panel-body">Synonymous codon usage biases are associated with various biological factors, such as gene expression level, gene length, gene translation initiation signal, protein amino acid composition, protein structure, tRNA abundance, mutation fre-quency and patterns, and GC compositions. Quantification of codon usage bias helps understand evolution of living organisms.<br><span class="tiny">W132?~@~SW136 Nucleic Acids Research, 2007, Vol. 35, Web Server issue doi:10.1093/nar/gkm392^MCodonO: codon usage bias analysis within and across genomes</span><br />For expression systems such as Ecoli, the host organism has a codon usage bias determined by their genomic RNA pool to achieve optimal translation rates.  The recombinant DNA should match this codon composition.</div>^M      </div>
-
+     <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse6">Why compare codon frequencies within the genome?</a>
+        </h4>
+     </div>
+      <div id="collapse6" class="panel-collapse collapse">
+        <div class="panel-body">Synonymous codon usage biases are associated with various biological factors, such as gene expression level, gene length, gene translation initiation signal, protein amino acid composition, protein structure, tRNA abundance, mutation fre-quency and patterns, and GC compositions. Quantification of codon usage bias helps understand evolution of living organisms.<br><span class="tiny">W132–W136 Nucleic Acids Research, 2007, Vol. 35, Web Server issue doi:10.1093/nar/gkm392
+CodonO: codon usage bias analysis within and across genomes</span><br />For expression systems such as Ecoli, the host organism has a codon usage bias determined by their genomic RNA pool to achieve optimal translation rates.  The recombinant DNA should match this codon composition.
+	</div>
+      </div>
+				
 <!-- FAQ/Ans 7
 -->
-     <div class="panel-heading">^M        <h4 class="panel-title">^M          <a data-toggle="collapse" href="#collapse7">What makes a 'good' sticky end restriction enzyme?</a>^M        </h4>^M     </div>^M      <div id="collapse7" class="panel-collapse collapse">^M        <div class="panel-body">RGR3 classes an enzyme as 'good' if it cuts the gene outside of the coding region to avoid disrupting the coding DNA segment.</div>^M      </div>
+     <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse7">What makes a 'good' sticky end restriction enzyme?</a>
+        </h4>
+     </div>
+      <div id="collapse7" class="panel-collapse collapse">
+        <div class="panel-body">RGR3 classes an enzyme as 'good' if it cuts the gene outside of the coding region to avoid disrupting the coding DNA segment.
+	</div>
+      </div>
+
 
 <!-- FAQ/Ans 8
 -->
-     <div class="panel-heading">^M        <h4 class="panel-title">^M          <a data-toggle="collapse" href="#collapse8">What browser should I use?</a>^M        </h4>^M     </div>^M      <div id="collapse8" class="panel-collapse collapse">^M        <div class="panel-body">RGR3 Genome Browser is written to the lastest standards of HTML5 and CSS3 (or CSS2.1-Help page) so feel free to use your preferred browser that supports these standards.</div>^M      </div>
-^M    </div>^M  </div>^M</div>
+     <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse8">Can I analyse more than one sticky end restriction enzyme?</a>
+        </h4>
+     </div>
+      <div id="collapse8" class="panel-collapse collapse">
+        <div class="panel-body">To analyse more than one sticky end restriction enzyme at a time, simply hold down the shift key whilst pressing the down and/or up arrow keys on the keyboard to make your selection.</div>
+      </div>
+
+
+<!-- FAQ/Ans 9
+-->
+     <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse9">What browser should I use?</a>
+        </h4>
+     </div>
+      <div id="collapse9" class="panel-collapse collapse">
+        <div class="panel-body">RGR3 Genome Browser is written to the lastest standards of HTML5 and CSS3 (or CSS2.1-Help page). Please ensure that your preferred browser supports these standards and video .mp4 elements.
+	</div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 
 
-
-
+<!-- create footer
+-->     
       <footer>
 <p></p>
 
 
-<!-- Not CSS level 3 Validated with Bootstrap stylesheet, now validated at css level 2.1
+<!-- Not CSS level 3 Validated with Bootstrap stylesheet, now validated at CSS level 2.1 due to multiple divs.
 -->
-<p>^M    <a href="http://css-validator.org/check/referer">^M        <img style="border:0;width:88px;height:31px"^M            src="http://css-validator.org/images/vcss-blue.png"^M            alt="Valid CSS!" />^M    </a>^M</p>
-
-
+<p>
+    <a href="http://css-validator.org/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://css-validator.org/images/vcss-blue.png"
+            alt="Valid CSS!" />
+    </a>
+</p>
 
 </footer>
     </body>
 </html>
-                                                                                                                                                                                          97,1          Bot
+                                                                                                                                                                               97,1          Bot
