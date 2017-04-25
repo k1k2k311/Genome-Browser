@@ -1,5 +1,4 @@
-
-                                                        #!/usr/bin/env python3
+#!/usr/bin/env python3
 #file for codon table 
 import cgi;
 
