@@ -49,6 +49,8 @@ with open(OUT, 'w') as file:
 
 # TO DO:
 
+# Remove records w/o GI, accession, etc (kind of redundant, since there is no Genbank file w/o GI, accession, etc)
+
 # write 'report' file with stats (no. of records removed, no. of records w/ multiple CDSs, etc)
 # and a list of their accessions
 
