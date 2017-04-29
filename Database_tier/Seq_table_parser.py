@@ -12,6 +12,9 @@ OUT = '/home/greg/Documents/Bioinformatics MSc/biocomp_2/Database_tier/seq_table
 with open(DATA, 'r') as file:
     records = file.read().split('\n//\n')
 
+# gets rid of empty record at the end
+records = records[:-1]
+
 # 'p' refers to pattern
 p_acc = re.compile(r'\nACCESSION\s{3}(\w+?)[\n|\s]')
 p_CDS = re.compile(r'CDS\s{13}(?:[\w\W]+?)\/translation="[A-Z\n\s]+?"')
