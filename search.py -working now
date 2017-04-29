@@ -1,0 +1,28 @@
+import MySQLconnect.py
+
+#v1
+
+def gene_search(terms, searchtype = []):
+    found = []
+
+    if files != None:
+        titlesrch = re.compile('>title<.*>/title<')
+        for file in files:
+
+            title = ""
+            if not (file.lower().endswith("html") or file.lower().endswith("htm")):
+                continue
+
+            filecontents = open( "type location here' + adddir + file, 'r').read()
+
+            titletmp = titlesrch.search(filecontents)
+            if titletmp != None:
+                title = filecontents.strip()[titletmp.start() + 7:titletmp.end() - 8]
+
+            filecontents = remove_tags(filecontents)
+            filecontents = filecontents.lstrip()
+            filecontents = filecontents.rstrip()
+
+    return found
+    
+    
