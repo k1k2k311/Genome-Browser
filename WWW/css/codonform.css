@@ -1,0 +1,64 @@
+/*Formatting for codon frequencies table within cgi script
+*/					
+table {
+	background-color:#efeff5;
+	margin: 20px;
+        border: thick solid black;
+        border-collapse: collapse;
+	color: navy;
+}
+
+/*....table header
+*/
+th {
+	background-color: silver;
+}
+
+/*....makes alternate section different color
+*/
+tr:nth-child(2), tr:nth-child(3), tr:nth-child(4), tr:nth-child(5), tr:nth-child(6), tr:nth-child(7), tr:nth-child(8), tr:nth-child(9), 
+tr:nth-child(18), tr:nth-child(19), tr:nth-child(20), tr:nth-child(21), tr:nth-child(22), tr:nth-child(23), tr:nth-child(24), tr:nth-child(25), tr:nth-child(34) {
+	background-color: white;
+}
+
+/*...makes borders on table
+*/
+td.ucag {
+	border-right: solid black;
+}
+
+td, th {
+	border: thin solid gray;
+	padding: 5px;
+}
+
+td.ratio {
+	border-right: solid black;
+}
+
+/*...general styling of table
+*/
+.center {
+	text-align: center;
+}
+
+.blue {
+	color: blue;
+}
+
+.red {
+	color: red;
+}
+
+caption {
+	font-weight: bold;
+	margin: 10px;
+	color: red;
+}
+
+
+
+
+
+
+

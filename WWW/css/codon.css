@@ -1,0 +1,67 @@
+/*Formatting for codon frequencies table
+*/					
+table {
+	background-color:#efeff5;
+	margin: 20px;
+        border: thick solid black;
+        border-collapse: collapse;
+	color: navy;
+}
+
+/*....table header
+*/
+th {
+	background-color: silver;
+}
+
+/*....makes alternate section different color
+*/
+tr:nth-child(2), tr:nth-child(3), tr:nth-child(4), tr:nth-child(5), tr:nth-child(10), tr:nth-child(11), tr:nth-child(12), tr:nth-child(13), tr:nth-child(18) {
+	background-color: white;
+}
+
+/*...makes borders on table
+*/
+td.ucag {
+	border-right: solid black;
+}
+
+td, th {
+	border: thin dotted gray;
+	padding: 5px;
+}
+
+td.ratio {
+	border-right: solid black;
+}
+
+/*...general styling of table
+*/
+.center {
+	text-align: center;
+}
+
+.blue {
+	color: blue;
+}
+
+.red {
+	color: red;
+}
+
+caption {
+	font-weight: bold;
+	margin: 10px;
+	color: red;
+}
+
+/*....highlights current row of table
+*/
+tr:hover {
+	background-color: yellow;
+}
+
+
+
+
+
