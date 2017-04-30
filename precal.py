@@ -1,32 +1,13 @@
-import Regexes_full
-
-import parser_re
-
 import codoncal
 
 import res
 
-import parser_re
-
 import search
 
+import data_access
 
 
-#extract sequences
-
-extract_seq = parser_re.load()[1]
-
-#or
-
-extract_seq= parser_re.p_gene
-
-#or
-
-extract_seq= regexes_full.p_trans
-
-
-#still, data with regex connection needned.
-# make extract_seq as one single line, should be '' form)
+data_access.get_all_coding_seqs() = extract_seq
 
 
 def chr3precal_per:
