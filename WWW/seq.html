@@ -1,0 +1,101 @@
+<!-- sequence analysis page
+
+     necesary html code, title, header and link to css styling file
+-->
+
+<!doctype html>
+<html>
+    <head>
+      <meta charset="utf-8"> 
+      <title>RGR3 Genome Browser</title>
+      <link type="text/css" rel="stylesheet" href="css/rgr3.css"> 
+    </head>
+
+    <body>
+      <header>
+        <h1>RGR <span class="red">3</span> Genome Browser</h1>
+	<h2>Homo sapiens (Human) Chromosome 3</h2> 
+      </header>
+
+<!-- Navigation toolbar
+-->
+      <nav>
+        <ul>
+	 <li><a href="index.html">HOME</a></li>
+	 <li><a href="codon.html">CODON FREQUENCIES</a><li>
+	 <li><a href="about.html">ABOUT</a></li>
+	 <li><a href="help.html">HELP</a></li>
+	</ul>	
+       </nav>
+
+<!--Insert summary list table immediately under nav bar
+-->
+       <aside>
+	<h4><span class="red">Summary List</span></h4>
+          <iframe src ="http://student.cryst.bbk.ac.uk/cgi-bin/cgiwrap/sr002/sumlist.py"></iframe>
+       </aside>
+
+<!-- Main form - link to cgi script           
+-->
+	<main>
+	<form
+	action="http://student.cryst.bbk.ac.uk/cgi-bin/cgiwrap/sr002/seq.py" 
+	method="post">
+
+<!-- Create box for user input-sequence entry box
+-->
+<p><b>Enter Sequence:</b><br />
+<textarea name="seq" cols='40' rows='10' required></textarea></p>
+
+
+<!-- Create checkboxes for analysis
+-->	     
+	    <fieldset>
+	         <legend><b>Analysis types</b></legend>
+	         <input name="an_type" type="checkbox" value="dna_seq" />Complete DNA sequence<br />
+		 <input name="an_type" type="checkbox" value="aa_seq" />Amino acid sequence<br />
+		 <input name="an_type" type="checkbox" value="codon" />Codon frequencies<br />	
+	      	
+               <p>Sticky end restriction sites for enzymes:</p>
+	        <select name="sticky_ends" multiple>
+		  <option value="EcoRI">EcoRI</option>
+		  <option value="BamHI">BamHI</option>
+		  <option value="BsuMI">BsuMI</option> 
+		</select>
+	   </fieldset>
+	      
+<!-- Form submit/clear button
+-->
+	    <p>
+	        <input type="submit" value="Submit data" />&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="reset" value="Clear form" />
+	    </p>
+
+	</form>
+       </main>
+
+
+<!-- create link returning to index page noted as data value search for gene            
+-->
+	<div id="or">
+	<p><b><span class="red">OR</span></b><br />Search by <a href="index.html"
+	   title="Input Data Value">Data Value</a><p>
+	</div>
+
+<!-- create footer            
+-->
+       <footer>
+      
+
+<!-- CSS level 3 Validated
+-->
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="Valid CSS!" />
+    </a>
+</p>
+       </footer>
+    </body>
+</html>
