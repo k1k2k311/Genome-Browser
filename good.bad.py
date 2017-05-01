@@ -30,19 +30,28 @@ re_site=res.single_res(extract_seq)
 
 def good_bad():
     bad = False
-    for k in re_site:
-        if (int(k[1])>codon_s and int(k[2])<codon_e):
-            return ("bad")
-            bad = True
-            break
-        else:
-            pass
-        if not bad:
-            return ("good") 
-# test
+    if partial3=="no" and partial5=="no":
+        for k in re_site:
+            if (int(k[1])>codon_s and int(k[2])<codon_e):
+                return ("bad")
+                bad = True
+                break
+            else:
+                pass
+            if not bad:
+                return ("good")
 
-codon_s=1588
-codon_e=3588
+    else:
+        return("Since (one of them/both)are partial end, we could not figure it out it is good or bad")
+
+
+partial3= 'no'
+partial5= 'yes'
+codon_start=1588
+codon_end=3588
 re_site=[('BAMHI','150','220'),('BAMHI','1023','1028')]
 
 print(good_bad())
+               
+
+
