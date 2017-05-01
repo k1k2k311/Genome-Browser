@@ -69,4 +69,21 @@ def search_by_accession(acc):
     summary = [gene, product, accession, locus]
     return summary
 
-print(search_by_accession('AB065665'))
+print(search_by_accession('AB065667'))
+
+
+def get_full_seq_and_cds(accession):
+
+    sql = "select * from full_sequence where accession = %s;" % accession
+    cursor = db.cursor()
+    nrows = cursor.execute(sql)
+    data = cursor.fetchone()
+    full_seq = data[1]
+    codon_start = data[2]
+    codon_end = data[3]
+    partial_5 = data[4]
+    partial_3 = data[5]
+    return [full_seq, codon_start, codon_end, partial_5, partial_3]
+
+
+# use WHERE column LIKE '%search%' for searches on gene, locus or product
