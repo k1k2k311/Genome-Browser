@@ -38,12 +38,11 @@ def good_bad():
                 break
             else:
                 pass
-            if not bad:
-                return ("good")
+        if not bad:
+            return ("good")
 
     else:
         return("Since (one of them/both)are partial end, we could not figure it out it is good or bad")
-
 
 partial3= 'no'
 partial5= 'yes'
