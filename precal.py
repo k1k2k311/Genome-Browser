@@ -23,7 +23,7 @@ def chr3precal_rev():
 
 
 with open('./chromosome_codon_usage.csv', 'w') as csvfile:
-    fieldnames = ['Codon', 'percentage','relevant ratio']
+    fieldnames = ['codon', 'percentage','relevant ratio']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writeheader()
     writer.writerow({'codon':chr3precal_rev()[0], 'percentage' : 'chr3precal_per[chr3precal_rev()[0]]','ratio' : 'chr3precal_rev[2]})
