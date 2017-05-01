@@ -5,7 +5,7 @@ import mysql.connector
 dbname = "lg001"
 dbhost = "hope"
 dbuser = "lg001"
-dbpass = "i-tf7on%8"
+dbpass = "--------"
 port = 3306
 
 db = mysql.connector.connect(host=dbhost, port=port,
