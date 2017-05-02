@@ -83,7 +83,7 @@ def count_perce_codons(cds):
 def count_relev_perce_codons(cds):
     codon_counts = count_codons(cds)
     trans_seq = translate(rem_vague(cds),codon_aa)
-    return [(codon, codon_aa[codon], float(codon_counts[codon])/trans_seq.count(codon_aa[codon])) for codon in codon_counts.keys()
+    return [(codon, codon_aa[codon], float(codon_counts[codon])/trans_seq.count(codon_aa[codon])) for codon in codon_counts.keys()]
 
      # the reults will be (('codon','Amino Acid','relative ratio'),('codon2','Amino Acid','relative raio')....)
 
