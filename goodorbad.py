@@ -1,26 +1,39 @@
-import data_access
+#Gathering information from data_access file 
 
-import parser_re
+import database.data_access
+
+# restriction enzyme site finding file 
 
 import res
 
+# Start site of coding region
+coding_s = data_access.get_full_seq_and_position()[1]
 
-codon_s = data_access.coding_s()
+# End site of coding region
+coding_e = data_access.get_full_seq_and_position()[2]
 
-# p_codon_end is needed in regexes_full
+# check weather 5' end is partial 
+partial5 = data_access. get_full_seq_and_positions()[3]
 
-codon_e = data_access.coding_e()
-
-# related with precal.py
-
-extract_seq= Regexes_full.p_trans
+# check weather 3' end is partial 
+partial3 = data_access. get_full_seq_and_positions()[4]
 
 
-re_site=res.single_res(extract_seq)
+# get_full_seq_andpositions() returns [full_seq, coding_start, coding_end, partial_5, partial_3] format
+
+
+extract_seq = data_access.get_ful_seq_and_position()[0]
+
+
+# will find restriction enzyme site of which enzyme,  you want to figure out it is good or bad.
+
+re_site=res.single_res('enzyme',extract_seq)
 
 # expected result [(enzyme, start,end),(enzyme,start,end)...]
  
-# First we set bad as flase
+ 
+ 
+# First we set bad as false
 
 # If any restirction enzyme site is bad(between x),for loop is broken
 # and bad is returned, otherwise the site is deem to be good
@@ -41,10 +54,13 @@ def good_bad():
     else:
         return("Since (one of them/both)are partial end, we could not figure it out it is good or bad")
 
+     
+# test
+     
 partial3= 'no'
 partial5= 'yes'
-codon_start=1588
-codon_end=3588
+codon_s=1588
+codon_e=3588
 re_site=[('BAMHI','150','220'),('BAMHI','1023','1028')]
 
 print(good_bad())
