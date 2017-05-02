@@ -1,9 +1,11 @@
-
+import database.data_access as data_access
 import re
 
 # Eznyme lists are stored as dictionary
 
 enzymes= {'BamHI':r"GGATCC",'EcoRI':r"GAATTC",'BsuMI':r"CTCGAG"}
+
+sequence = data_access.get_full_seq_and_positions()[0]
 
 
 # Finding whole restriction enzyme site
