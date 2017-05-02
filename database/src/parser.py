@@ -2,10 +2,10 @@
 
 import parser_module
 
-RECORDS = '/home/greg/Documents/Bioinformatics MSc/biocomp_2/Database_tier/processed_records.txt'
-SUMMARY_TABLE = '/home/greg/Documents/Bioinformatics MSc/biocomp_2/Database_tier/summary_table.dat'
-CODING_SEQ_TABLE = '/home/greg/Documents/Bioinformatics MSc/biocomp_2/Database_tier/coding_seq_table.dat'
-FULL_SEQ_TABLE = '/home/greg/Documents/Bioinformatics MSc/biocomp_2/Database_tier/full_seq_table.dat'
+RECORDS = '/database/src/processed_records.txt'
+SUMMARY_TABLE = '/database/src/summary_table.dat'
+CODING_SEQ_TABLE = '/database/src/coding_seq_table.dat'
+FULL_SEQ_TABLE = '/database/src/full_seq_table.dat'
 
 
 # reads raw genbank file and creates list of records based on delimiter '//'
