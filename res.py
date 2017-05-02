@@ -1,9 +1,12 @@
 
 import re
 
+# Eznyme lists are stored as dictionary
+
 enzymes= {'BamHI':r"GGATCC",'EcoRI':r"GAATTC",'BsuMI':r"CTCGAG"}
 
-sequence = 'AAGGATCCAGAATTCAAGGATCCAAC'
+
+# Finding whole restriction enzyme site
 
 store_list = []
 
@@ -15,12 +18,12 @@ def giveme_res (sequence):
             find_end=match.end()
             store_list.append((k,str(find_st),str(find_end)))
     return store_list
+
+    # Format will be (('enzyme','start number of restriction enzyme site in seuqnece','end number of restriction enzyme site') ....)
             
 
-print(giveme_res(sequence))
 
-
-#for single enzyme find usage,
+# For single enzyme finding usage,
 
 store_list_single=[]
 def single_res(enzyme, sequence):
@@ -31,9 +34,10 @@ def single_res(enzyme, sequence):
 		store_list_single.append((enzyme,str(find_st),str(find_end)))
 	return store_list_single
 
-store_list_custom=[]  gtagta   r'gtagta
 
 #for custom search
+
+store_list_custom=[]  
 
 def custom_search_res(res_seq,sequence):
 	pattern = re.compile(res_seq)
@@ -43,8 +47,11 @@ def custom_search_res(res_seq,sequence):
 		find_end=match.end()
 		store_list_custom.append((res_seq,str(find_st),str(find_end)))
 	return stroe_list_custom
-	
-	
-					 
-	
 
+
+#test					 
+sequence = 'AAGGATCCAGAATTCAAGGATCCAAC'
+
+print(giveme_res(sequence))
+print(single_res('BamHI',sequence))
+print(custom_search_res('TTCAAG',sequence))
