@@ -2,9 +2,9 @@
 
 import re
 
-CHROM_3_PATH = '/home/greg/Documents/Bioinformatics MSc/biocomp_2/Database_tier/chrom_CDS_3'
-OUT = '/home/greg/Documents/Bioinformatics MSc/biocomp_2/Database_tier/processed_records.txt'
-REPORT = '/home/greg/Documents/Bioinformatics MSc/biocomp_2/Database_tier/processing_report.txt'
+CHROM_3_PATH = 'database/src/chrom_CDS_3'
+OUT = '/database/src/processed_records.txt'
+REPORT = '/database/src/processing_report.txt'
 
 # matches records with remote joins
 p_remote_join = re.compile(r'CDS\s{13}join\([<\d\.,\n\s]*?[A-Z]{1,2}\d{3,8}\.\d:')
