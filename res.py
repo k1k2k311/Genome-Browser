@@ -35,7 +35,7 @@ def single_res(enzyme, sequence):
 	return store_list_single
 
 
-#for custom search
+# For custom search
 
 store_list_custom=[]  
 
@@ -47,6 +47,8 @@ def custom_search_res(res_seq,sequence):
 		find_end=match.end()
 		store_list_custom.append((res_seq,str(find_st),str(find_end)))
 	return stroe_list_custom
+
+        # res_seq is a custom sequence which the user will type, it is their own restriction enzyme site.
 
 
 #test					 
