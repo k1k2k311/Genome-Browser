@@ -45,18 +45,3 @@ with open(OUT, 'w') as file:
     for gene in new_records:
         file.write(gene)
         file.write('\n//\n')
-
-
-# TO DO:
-
-# Remove records w/o GI, accession, etc (kind of redundant, since there is no Genbank file w/o GI, accession, etc)
-
-# write 'report' file with stats (no. of records removed, no. of records w/ multiple CDSs, etc)
-# and a list of their accessions
-
-# could there be any records with remote joins for one or more - but not all - splice variants? If so, check if
-# len(p_remote_join.findall(gene)) < len(p_CDS.findall(gene)); if so, don't remove the record during processing
-# but then during parsing: need to ensure remote joins are not included.
-# same thing for pseudogenes (this case can definitely occur)
-# at the moment I am being conservative and removing any records with a mention of '/pseudo'
-
