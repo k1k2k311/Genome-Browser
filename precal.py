@@ -1,5 +1,7 @@
 import database.data_access as data_acess
 
+import codoncal
+
 import res
 
 import csv  
@@ -25,6 +27,5 @@ with open('./chromosome_codon_usage.csv', 'w') as csvfile:
     writer.writeheader()
     writer.writerow({'codon':chr3precal_rev()[0], 'percentage' : 'chr3precal_per[chr3precal_rev()[0]]','ratio' : 'chr3precal_rev[2]})
         
-
 
 
