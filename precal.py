@@ -1,12 +1,9 @@
-import codoncal
+import database.data_access as data_acess
 
 import res
 
-import search
-
-import data_access
-
 import csv  
+
 data_access.get_all_coding_seqs() = extract_seq
 
 
