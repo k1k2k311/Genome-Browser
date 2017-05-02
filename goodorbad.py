@@ -1,18 +1,15 @@
-import Regexes_full
+import data_access
 
 import parser_re
 
 import res
 
 
-
-
-codon_s = Regexes_full.p_codon_start
-
+codon_s = data_access.coding_s()
 
 # p_codon_end is needed in regexes_full
 
-codon_e = Regexes_full.p_codon_end
+codon_e = data_access.coding_e()
 
 # related with precal.py
 
