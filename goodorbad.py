@@ -1,6 +1,6 @@
 #Gathering information from data_access file 
 
-import database.data_access
+import database.data_access as data_access
 
 # restriction enzyme site finding file 
 
