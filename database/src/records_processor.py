@@ -7,7 +7,7 @@ OUT = '/home/greg/Documents/Bioinformatics MSc/biocomp_2/Database_tier/processed
 REPORT = '/home/greg/Documents/Bioinformatics MSc/biocomp_2/Database_tier/processing_report.txt'
 
 # matches records with remote joins
-p_remote_join = re.compile(r'CDS\s{13}join\([<\d.,\n\s]*?[A-Z]{1,2}\d{3,8}\.\d:')
+p_remote_join = re.compile(r'CDS\s{13}join\([<\d\.,\n\s]*?[A-Z]{1,2}\d{3,8}\.\d:')
 # matches records with non-functional (pseudo) genes
 p_pseudo = re.compile(r'\/pseudo')
 # translation
