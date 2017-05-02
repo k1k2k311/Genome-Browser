@@ -32,6 +32,7 @@ def parse_accession(gene):
     # takes a single genbank record string as input and returns the accession number
 
     accession = p_accession.search(gene).group(1)
+    
     return accession
 
 
@@ -128,6 +129,7 @@ def parse_cds_feature(gene):
     # carrying out subsequent re searches on this cds, rather than the whole gene, ensures data integrity
 
     cds = p_CDS.search(gene).group(0)
+    
     return cds
 
 
@@ -152,8 +154,12 @@ def parse_coding_boundaries(gene):
         positions = [x.split('..') for x in split_match]
         coding_start = int(positions[0][0])
         coding_end = int(positions[-1][1])
+    else:
+        accession = p_accession.search(gene).group(1)
+        print('Warning: unexpected CDS type for record %s.' % accession)
+        
     if p_CDS_complement.search(cds):
-        dna_length = p_length.search(gene).group(1)
+        dna_length = int(p_length.search(gene).group(1))
         coding_start = (dna_length + 1) - coding_end
         coding_end = (dna_length + 1) - coding_start
 
@@ -167,6 +173,7 @@ def parse_complement_or_not(cds):
         complement = True
     else:
         complement = False
+    
     return complement
 
 
@@ -188,9 +195,13 @@ def parse_full_cds_coordinates(gene):
             match = trimmed_match
         split_match = trimmed_match.split(',')
         full_coordinates = [x.split('..') for x in split_match]
+    else:
+        accession = p_accession.search(gene).group(1)
+        print('Warning: unexpected CDS type for record %s.' % accession)
+        
     if p_CDS_complement.search(cds):
-        dna_length = p_length.search(gene).group(1)
-        full_coordinates = [x for x in reversed(full)]
+        dna_length = int(p_length.search(gene).group(1))
+        full_coordinates = [x for x in reversed(full_coordinates)]
         for x in full_coordinates:
             start = (dna_length + 1) - x[1]
             end = (dna_length + 1) - x[0]
@@ -209,6 +220,7 @@ def parse_full_dna(gene):
     for char in ' 1234567890\n\t':
         pure_dna = raw_dna.replace(char, '')
         raw_dna = pure_dna
+    
     return pure_dna
 
 
@@ -223,6 +235,7 @@ def parse_full_reverse_complement(gene):
         pure_dna = raw_dna.replace(char, '')
         raw_dna = pure_dna
     reverse_complement = ''.join(basepair_dict[base] for base in raw_dna[::-1])
+    
     return reverse_complement
 
 
@@ -233,6 +246,7 @@ def parse_gene(cds):
         gene_name = p_gene.search(cds).group(1)
     else:
         gene_name = 'NULL'
+    
     return gene_name
 
 
@@ -243,25 +257,28 @@ def parse_locus(gene):
         locus = p_locus.search(gene).group(1)
     else:
         locus = 'NULL'
+    
     return locus
 
 
 def parse_partial(cds):
     # takes a single genbank record string as input and returns tuple of partial cds information
-    # note that the '>' and '<' signs are switched for complement sequences
+    # note that the complement sequences are on the reverse strand, so if the partial_5 pattern matchs,
+    # its actually partial at the 3' end of the reverse complement, and vice versa
 
     partial_5 = 'no'
     partial_3 = 'no'
     if p_CDS_complement.search(cds):
-        if '<' in cds:
+        if p_partial_5.search(cds):
             partial_3 = 'yes'
-        if '>' in cds:
+        if p_partial_3.search(cds):
             partial_5 = 'yes'
     else:
-        if '<' in cds:
+        if p_partial_5.search(cds):
             partial_5 = 'yes'
-        if '>' in cds:
+        if p_partial_3.search(cds):
             partial_3 = 'yes'
+    
     return partial_5, partial_3
 
 
@@ -272,10 +289,12 @@ def parse_product(cds):
         product = p_product.search(cds).group(1)
     else:
         product = 'NULL'
+    
     return product
 
 
 def parse_translation(cds):
 
     translation = p_translation(cds).group(1)
+    
     return translation
