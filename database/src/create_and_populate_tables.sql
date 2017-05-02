@@ -16,7 +16,7 @@ CREATE TABLE summary
 CREATE TABLE coding_sequence
 (       accession       VARCHAR(10)     NOT NULL,
 	coding_seq	MEDIUMTEXT	NOT NULL,
-        FOREIGN KEY (accession) REFERENCES summary(accesison)
+        FOREIGN KEY (accession) REFERENCES summary(accession)
 );
 
 
@@ -31,7 +31,7 @@ CREATE TABLE full_sequence
 	partial_3		CHAR(3)		NOT NULL,
 	full_coordinates	VARCHAR(200)	NOT NULL,
 	translation		MEDIUMTEXT	NOT NULL,
-        FOREIGN KEY (accession) REFERENCES summary(accesison)
+        FOREIGN KEY (accession) REFERENCES summary(accession)
 );
 
 -- POPULATE TABLES:
