@@ -42,7 +42,7 @@ def good_bad():
     bad = False
     if partial3=="no" and partial5=="no":
         for k in re_site:
-            if (int(k[1])>codon_s and int(k[2])<codon_e):
+            if (int(k[1])>coding_s and int(k[2])<coding_e):
                 return ("bad")
                 bad = True
                 break
@@ -59,8 +59,8 @@ def good_bad():
      
 partial3= 'no'
 partial5= 'yes'
-codon_s=1588
-codon_e=3588
+coding_s=1588
+coding_e=3588
 re_site=[('BAMHI','150','220'),('BAMHI','1023','1028')]
 
 print(good_bad())
