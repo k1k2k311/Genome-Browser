@@ -29,7 +29,7 @@ CREATE TABLE full_sequence
 	coding_end		INT		NOT NULL,
 	partial_5		CHAR(3)		NOT NULL,
 	partial_3		CHAR(3)		NOT NULL,
-	full_coordinates	VARCHAR(200)	NOT NULL,
+	full_coordinates	MEDIUMTEXT	NOT NULL,
 	translation		MEDIUMTEXT	NOT NULL,
         FOREIGN KEY (accession) REFERENCES summary(accession)
 );
