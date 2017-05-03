@@ -3,7 +3,8 @@
 Biocomputing II project
 MSc Bioinformatics with Systems Biology, Birkbeck
 
-Chromosome 3
+Chromosome 3 genome browser website: http://student.cryst.bbk.ac.uk/~sr002/index.html
+(not yet integrated with the database and middle layers)
 
 group members:
   Website: Rudo supple (rudo.supple@gmail.com)
