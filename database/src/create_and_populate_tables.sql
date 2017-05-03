@@ -29,7 +29,7 @@ CREATE TABLE full_sequence
 	coding_end		INT		NOT NULL,
 	partial_5		CHAR(3)		NOT NULL,
 	partial_3		CHAR(3)		NOT NULL,
-	full_coordinates	MEDIUMTEXT	NOT NULL,
+	full_cds_positions	MEDIUMTEXT	NOT NULL,
 	translation		MEDIUMTEXT	NOT NULL,
         FOREIGN KEY (accession) REFERENCES summary(accession)
 );
@@ -37,17 +37,17 @@ CREATE TABLE full_sequence
 -- POPULATE TABLES:
 
 -- summary data:
-LOAD DATA INFILE "/d/user6/lg001/Biocomp2/project/summary_table.dat" INTO TABLE summary
+LOAD DATA INFILE "/Genome-Browser/database/src/summary_table.dat" INTO TABLE summary
 FIELDS TERMINATED BY '|'
 LINES TERMINATED BY '\n';
 
 -- coding_sequence data:
-LOAD DATA INFILE "/d/user6/lg001/Biocomp2/project/seq_table.dat" INTO TABLE coding_sequence
+LOAD DATA INFILE "/Genome-Browser/database/src/coding_seq_table.dat" INTO TABLE coding_sequence
 FIELDS TERMINATED BY '|'
 LINES TERMINATED BY '\n';
 
 -- full_sequence data:
-LOAD DATA INFILE "/d/user6/lg001/Biocomp2/project/full_seq_table.dat" INTO TABLE full_sequence
+LOAD DATA INFILE "/Genome-Browser/database/src/full_seq_table.dat" INTO TABLE full_sequence
 FIELDS TERMINATED BY '|'
 LINES TERMINATED BY '\n';
 

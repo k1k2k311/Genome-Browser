@@ -2,11 +2,12 @@
 
 import re
 
-CHROM_3_PATH = 'database/src/chrom_CDS_3'
-OUT = '/database/src/processed_records.txt'
-REPORT = '/database/src/processing_report.txt'
+CHROM_3_PATH = '/Genome-Browser/database/src/chrom_CDS_3'
+OUT = '/Genome-Browser/database/src/processed_records.txt'
+REPORT = '/Genome-Browser/database/src/processing_report.txt'
 
 # matches records with remote joins
+# doesn't match joins with complements, but there are no cases like this in the data
 p_remote_join = re.compile(r'CDS\s{13}join\([<\d\.,\n\s]*?[A-Z]{1,2}\d{3,8}\.\d:')
 # matches records with non-functional (pseudo) genes
 p_pseudo = re.compile(r'\/pseudo')
@@ -23,6 +24,7 @@ records = records[:-1]
 print('starting number of records: ', len(records))
 removed_records = []
 
+# creates a new list of records, identical to records list but with unwanted records removed
 new_records = []
 for gene in records:
     if p_remote_join.search(gene) is None and p_pseudo.search(gene) is None and p_trans.search(gene) is not None:

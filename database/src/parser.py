@@ -2,10 +2,10 @@
 
 import parser_module
 
-RECORDS = '/database/src/processed_records.txt'
-SUMMARY_TABLE = '/database/src/summary_table.dat'
-CODING_SEQ_TABLE = '/database/src/coding_seq_table.dat'
-FULL_SEQ_TABLE = '/database/src/full_seq_table.dat'
+RECORDS = '/Genome-Browser/database/src/processed_records.txt'
+SUMMARY_TABLE = '/Genome-Browser/database/src/summary_table.dat'
+CODING_SEQ_TABLE = '/Genome-Browser/database/src/coding_seq_table.dat'
+FULL_SEQ_TABLE = '/Genome-Browser/database/src/full_seq_table.dat'
 
 
 # reads raw genbank file and creates list of records based on delimiter '//'
@@ -26,6 +26,7 @@ with open(SUMMARY_TABLE, 'w') as output:
 
 # writing coding_sequence table data in mysql-readable format for bulk-loading
 with open(CODING_SEQ_TABLE, 'w') as output:
+    max_len = 0
     for gene in records:
         accession = parser_module.parse_accession(gene)
         coding_seq = parser_module.parse_coding_seq(gene)
@@ -48,11 +49,11 @@ with open(FULL_SEQ_TABLE, 'w') as output:
             full_seq = parser_module.parse_full_reverse_complement(gene) + '|'
         else:
             full_seq = parser_module.parse_full_dna(gene) + '|'
-        coding_start = parser_module.parse_coding_boundaries(gene)[0] + '|'
-        coding_end = parser_module.parse_coding_boundaries(gene)[1] + '|'
+        coding_start = str(parser_module.parse_coding_boundaries(gene)[0]) + '|'
+        coding_end = str(parser_module.parse_coding_boundaries(gene)[1]) + '|'
         partial_5 = parser_module.parse_partial(cds)[0] + '|'
         partial_3 = parser_module.parse_partial(cds)[1] + '|'
-        full_coordinates = ','.join(x for x in parser_module.parse_cds_positions(gene)[3]) + '|'
+        full_coordinates = parser_module.parse_full_cds_coordinates(gene) + '|'
         translation = parser_module.parse_translation(cds)
         row_data = accession + full_seq + coding_start + coding_end + partial_5 + partial_3
         row_data += full_coordinates + translation + '\n'
