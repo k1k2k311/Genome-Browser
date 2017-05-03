@@ -2,9 +2,9 @@
 
 import re
 
-CHROM_3_PATH = '/home/greg/Documents/Bioinformatics MSc/biocomp_2/database/src/chrom_CDS_3'
-OUT = '/home/greg/Documents/Bioinformatics MSc/biocomp_2/database/src/processed_records.txt'
-REPORT = '/home/greg/Documents/Bioinformatics MSc/biocomp_2/database/src/processing_report.txt'
+CHROM_3_PATH = '/Genome-Browser/database/src/chrom_CDS_3'
+OUT = '/Genome-Browser/database/src/processed_records.txt'
+REPORT = '/Genome-Browser/database/src/processing_report.txt'
 
 # matches records with remote joins
 # doesn't match joins with complements, but there are no cases like this in the data
