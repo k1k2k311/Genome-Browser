@@ -37,17 +37,17 @@ CREATE TABLE full_sequence
 -- POPULATE TABLES:
 
 -- summary data:
-LOAD DATA INFILE "/d/user6/lg001/Biocomp2/project/summary_table.dat" INTO TABLE summary
+LOAD DATA INFILE "/Genome-Browser/database/src/summary_table.dat" INTO TABLE summary
 FIELDS TERMINATED BY '|'
 LINES TERMINATED BY '\n';
 
 -- coding_sequence data:
-LOAD DATA INFILE "/d/user6/lg001/Biocomp2/project/coding_seq_table.dat" INTO TABLE coding_sequence
+LOAD DATA INFILE "/Genome-Browser/database/src/coding_seq_table.dat" INTO TABLE coding_sequence
 FIELDS TERMINATED BY '|'
 LINES TERMINATED BY '\n';
 
 -- full_sequence data:
-LOAD DATA INFILE "/d/user6/lg001/Biocomp2/project/full_seq_table.dat" INTO TABLE full_sequence
+LOAD DATA INFILE "/Genome-Browser/database/src/full_seq_table.dat" INTO TABLE full_sequence
 FIELDS TERMINATED BY '|'
 LINES TERMINATED BY '\n';
 
